@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綜合事件練習</title>
+</head>
+<body>
+    <h1>綜合事件練習</h1>
+
+    <!-- Click 事件 -->
+    <button id="clickBtn">點擊我</button>
+
+    <!-- Double Click 事件 -->
+    <button id="dblClickBtn">雙擊我</button>
+
+    <!-- Mouse Enter 事件 -->
+    <div id="mouseEnterDiv" style="width:200px;height:200px;background-color:lightblue;">移入我</div>
+
+    <!-- Mouse Leave 事件 -->
+    <div id="mouseLeaveDiv" style="width:200px;height:200px;background-color:lightgreen;">移出我</div>
+
+    <!-- Key Down 事件 -->
+    <input type="text" id="keyDownInput" placeholder="按下鍵盤按鈕">
+
+    <!-- Key Up 事件 -->
+    <input type="text" id="keyUpInput" placeholder="釋放鍵盤按鈕">
+
+    <!-- Submit 事件 -->
+    <form id="myForm">
+        <input type="text" placeholder="輸入一些文字">
+        <button type="submit">提交</button>
+    </form>
+
+    <!-- Change 事件 -->
+    <select id="mySelect">
+        <option value="apple">蘋果</option>
+        <option value="banana">香蕉</option>
+        <option value="cherry">櫻桃</option>
+    </select>
+
+    <script>
+        // Click 事件
+        document.getElementById('clickBtn').addEventListener('click', () => {
+            console.log('按鈕被點擊了');
+        });
+
+        // Double Click 事件
+        document.getElementById('dblClickBtn').addEventListener('dblclick', () => {
+            console.log('按鈕被雙擊了');
+        });
+
+        // Mouse Enter 事件
+        document.getElementById('mouseEnterDiv').addEventListener('mouseenter', () => {
+            console.log('滑鼠移入了區域');
+        });
+
+        // Mouse Leave 事件
+        document.getElementById('mouseLeaveDiv').addEventListener('mouseleave', () => {
+            console.log('滑鼠移出了區域');
+        });
+
+        // Key Down 事件
+        document.getElementById('keyDownInput').addEventListener('keydown', (event) => {
+            console.log('按下了鍵盤按鈕: ' + event.key);
+        });
+
+        // Key Up 事件
+        document.getElementById('keyUpInput').addEventListener('keyup', (event) => {
+            console.log('釋放了鍵盤按鈕: ' + event.key);
+        });
+
+        // Submit 事件
+        document.getElementById('myForm').addEventListener('submit', (event) => {
+            event.preventDefault(); // 防止表單實際提交
+            console.log('表單已提交');
+        });
+
+        // Change 事件
+        document.getElementById('mySelect').addEventListener('change', (event) => {
+            console.log('選擇的水果是: ' + event.target.value);
+        });
+    </script>
+</body>
+</html>

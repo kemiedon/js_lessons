@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <script>
+        var timerId = setTimeout(function() {
+            console.log('這行會在三秒後印出');
+        }, 3000); // 設置3000毫秒（3秒）後執行
+
+        // 我們也可以在需要的時候取消定時器
+        clearTimeout(timerId);
+    </script>
+</body>
+</html>

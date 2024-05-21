@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本appendChild練習</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Pear</li>
+    </ul>
+
+    
+    <script>
+        const list = document.getElementById("list");
+        //宣告一個新的節點
+        let new_li = document.createElement("li");
+        //設定屬性
+        new_li.textContent = '茘枝';
+        //將節點加入指定物件
+        list.appendChild(new_li);
+        
+        //練習:增加一個按鈕，然後按一次按鈕就增加一個li項目(茘枝)
+
+        //練習2:移除Apple的節點
+        
+    </script>
+</body>
+</html>

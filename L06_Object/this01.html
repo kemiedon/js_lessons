@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This案例-全域與區域中的this</title>
+</head>
+<body>
+    <script>
+        console.log(this); //全域的this為window
+        var getGender = function(){
+            return people1.gender; //區域內的要看是誰呼叫就是誰
+        };
+
+        var people1 = {
+            gender: 'female',
+            getGender: getGender
+        };
+
+        var people2 = {
+            gender: 'male',
+            getGender: getGender
+        };
+
+        console.log( people1.getGender() );
+        console.log( people2.getGender() );
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 和 JSON 範例</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #data {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>AJAX 和 JSON 範例</h1>
+    <button id="loadDataBtn">載入數據</button>
+    <div id="data"></div>
+    
+    <script>
+        document.getElementById('loadDataBtn').addEventListener('click', function() {
+            try {
+                // 創建 XMLHttpRequest 對象
+                const xhr = new XMLHttpRequest();
+                
+                // 配置請求：方法、URL、是否異步
+                xhr.open('GET', 'https://jsonplaceholder.typicode.com/users', true);
+                
+                // 設定請求完成時的回調函數
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        // 解析 JSON 數據
+                        const users = JSON.parse(xhr.responseText);
+                        
+                        // 生成 HTML 內容
+                        let output = '<h2>用戶列表</h2><ul>';
+                        users.forEach(user => {
+                            output += `<li>${user.name} - ${user.email}</li>`;
+                        });
+                        output += '</ul>';
+                        
+                        // 顯示數據
+                        document.getElementById('data').innerHTML = output;
+                    } else {
+                        throw new Error('無法載入數據');
+                    }
+                };
+                
+                // 發送請求
+                xhr.send();
+            } catch (error) {
+                console.error(error);
+                alert('發生錯誤，請稍後再試！');
+            }
+        });
+    </script>
+</body>
+</html>

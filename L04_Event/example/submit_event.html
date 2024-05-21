@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>表單提交提示</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">提交</button>
+    </form>
+    <p id="formMessage"></p>
+
+    <script>
+        const myForm = document.getElementById('myForm');
+        const formMessage = document.getElementById('formMessage');
+
+        myForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // 防止表單實際提交
+            formMessage.innerText = "表單已提交，謝謝！";
+        });
+    </script>
+</body>
+</html>

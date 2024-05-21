@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>變數類型</title>
+</head>
+
+<body>
+    <h1>變數練習</h1>
+    <script>
+        let a = 10; //數值型態 number 範圍為 -9007199254740991~9007199254740991 
+        //大範圍數字需要用bignumber
+        let bignum = 9999999999999999n; //後面加上n為bignumber
+
+        let b = 'happy'; //字串型態
+        let score = 100;
+        console.log('I got ' + score);
+        console.log(`I got ${score}`);
+
+        let is_happy = true; //布林值型態 記錄是否happy，因為只有是或否，所以可以用布林值
+
+        //所有已宣告但未給值的變數，都會印出undefind
+        let age;
+        console.log(age);
+
+        let fruits = ['apple', 'banana', 'kiwi', 'peach']; //陣列
+        
+        let user = {
+            name: 'Mark',
+            age: 18,
+            job: 'Engineer'
+        }
+        console.log(user['name']);
+        console.log(user.name);
+        //Infinity 無限大 與 NaN (Not a Number)
+        console.log(10 / 0);
+        console.log('happy' - 3);
+    </script>
+</body>
+
+</html>

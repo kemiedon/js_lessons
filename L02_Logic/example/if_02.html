@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP會員購物折扣計算</title>
+</head>
+<body>
+    <script>
+        // 購物車的商品總金額
+        var total = 3500; // 你可以更改這個值來測試
+
+        // 是否為VIP會員
+        var isVIP = false; // 你可以更改這個值來測試
+
+        // 根據購物車的總額與是否為VIP會員計算折扣與是否免運
+        if ((isVIP && total > 1000) || (!isVIP && total > 3000)) {
+            total *= 0.8; // 適用8折優惠
+            console.log('您的購物金額超過' + (isVIP ? '1000' : '3000') + '元，將享有8折優惠與免運費，訂單總金額為' + total + '元。');
+        } else if (total > 1000) {
+            console.log('您的購物金額超過1000元，將享有免運費，訂單總金額為' + total + '元。');
+        } else {
+            console.log('您的訂單總金額為' + total + '元。');
+        }
+    </script>
+</body>
+</html>

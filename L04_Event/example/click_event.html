@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>點擊按鈕顯示訊息</title>
+</head>
+<body>
+    <button id="showMessageBtn">顯示訊息</button>
+    <p id="message"></p>
+
+    <script>
+        const showMessageBtn = document.getElementById('showMessageBtn');
+        const message = document.getElementById('message');
+
+        showMessageBtn.addEventListener('click', () => {
+            message.innerText = "你好，歡迎使用我們的網站！";
+        });
+    </script>
+</body>
+</html>

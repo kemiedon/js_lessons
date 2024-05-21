@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list"></div>
+    <script>
+        let user = {};
+        let user2 = {
+            name: 'Mary',
+            phone: '0967527382'
+        }
+        //增加user物件屬性
+        user.name = "Mark";
+        user.phone = "0977829374";
+        user.birth = "1988-12-12";
+        user["phone"] = "0978392010";
+        //增加user2的屬性
+        user2.birth = "1982-09-08";
+        user2.email = 'mark@gmail.com';
+        console.log(user);
+        console.log(user2);
+        //取得user2的電話
+        console.log(user2["phone"]);
+        //要把user的所有資料印在主控台中
+        let list = document.getElementById("list");
+        let list_items = '';
+        for(var i in user){ //跑物件屬性的時候用 in, 單純的陣列索引值用length
+            // console.log('i=' + i);
+            // console.log(user[i]);
+            list_items += user[i] + "<br>";
+           
+            //練習:思考如何將user所有資料顯示在div上
+        }
+        //顯示在畫面上
+        list.innerHTML = list_items;
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函式說明範例</title>
+    <style>
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 300px;
+            font-family: Arial, sans-serif;
+        }
+
+        .step {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>做一個三明治</h1>
+    <button onclick="makeSandwich('全麥', '火腿')">做火腿三明治</button>
+    <button onclick="makeSandwich('白麵包', '奶酪')">做奶酪三明治</button>
+    <div id="result"></div>
+
+    <script>
+        // 在每次按下按鈕時，將呼叫 makeSandwich 函式
+        // 並將麵包種類和餡料作為參數傳入
+
+        // makeSandwich 函式的作用是在畫面上顯示製作三明治的步驟(每0.5秒顯示一行字)
+        // 每個步驟將以 div 元素的形式顯示在結果區域
+
+        // 以下是 makeSandwich 函式的步驟：
+        // 1. 獲取結果區域的元素
+
+        // 2. 清空結果區域的內容
+
+        // 3. 定義一個步驟陣列，包含製作三明治的每個步驟描述
+
+        // 4. 初始化步驟索引為 0
+
+        // 5. 使用 if-else 判斷，setInterval 設定每隔 0.5 秒執行一次的函式：
+
+        //    - 如果步驟索引小於步驟陣列的長度，則執行以下步驟：
+        //      a. 將步驟描述設置為 div 元素的內容
+        //      b. 將 div 元素添加到結果區域中
+        //      c. 增加步驟索引的值，以顯示下一個步驟
+
+        //    - 如果步驟索引超出步驟陣列的長度，則停止 setInterval 的執行
+
+    </script>
+</body>
+
+</html>

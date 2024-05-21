@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物折扣計算</title>
+</head>
+<body>
+    <script>
+        // 購物車的行項總金額
+        var total = 1500; // 你可以改變這個值來測試
+
+        // 根據購物車的總額來計算折扣
+        if (total > 1000) {
+            total *= 0.9; // 適用10%的折扣
+            console.log('由於您的購物車金額超過1000元，所以您的金額已經有10%的折扣，訂單總金額為' + total + '元');
+        } else {
+            console.log('您的訂單總金額為' + total + '元');
+        }
+    </script>
+</body>
+</html>

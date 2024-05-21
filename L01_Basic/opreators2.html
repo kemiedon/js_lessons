@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比較與邏輯運算子</title>
+</head>
+
+<body>
+    <script>
+        //邏輯運算子需搭配if或while等需要條件的架構
+        let bmi = 21;
+        if (bmi > 18.5 && bmi < 24) {
+            console.log('您的bmi正常');
+        }
+        if (bmi < 18 || bmi > 24) {
+            console.log('您的bmi不在正常範圍');
+        }
+        // != 不等於的使用
+        let score = 100;
+        if(score != 100){
+            console.log('分數未達100');
+        }
+
+        //嚴謹比較
+        let a = 10;
+        let b = '10';
+        if ( a === b ){
+            console.log('通過')
+        }else{
+            console.log('不通過')
+        }
+    </script>
+</body>
+
+</html>

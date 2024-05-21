@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判斷會員登入</title>
+</head>
+<body>
+    <div id="greeting"></div>
+    <script>
+        var is_login = false;  //初始假設使用者未登入
+        var name = "Chris";    //預設的使用者名稱
+
+        var greetingElement = document.getElementById('greeting');
+
+        if (is_login) {
+            //  如果使用者已登入，顯示歡迎訊息
+            greetingElement.innerHTML = 'Hi, ' + name + ', 歡迎回來';
+        } else {
+            //  如果使用者未登入，顯示登入連結
+            greetingElement.innerHTML = '<a href="#">登入</a>';
+        }
+    </script>
+</body>
+</html>

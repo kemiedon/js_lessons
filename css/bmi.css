@@ -1,0 +1,91 @@
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#data {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.group {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.group label {
+    padding: 10px;
+    display: block;
+}
+
+.group input[type=text] {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    margin: auto;
+    font-size: 24px;
+}
+
+#box {
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid #d8d8d8;
+    background: #ffffff;
+    box-shadow: 3px 3px 10px #d8d8d8;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: left;
+}
+
+#confirm {
+    width: 100px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* CSS */
+
+.button-87 {
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-87:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.button-87:active {
+    transform: scale(0.95);
+}

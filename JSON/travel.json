@@ -1,0 +1,43 @@
+{
+    "about": "明山於2009年在溪頭灑下夢想的種子，開始用松林町來代表溪頭的新紀元。打造了一條日式商店街「松林町」，這是紀錄明山發展史及紀念創辦人松林勝一(日據時代名字，本名林贍)的嶄新建設。在幽綠的森林月夜中抹上了一條長紅，讓來到溪頭夜宿的旅人，能在大紅燈籠下夜尋山林中日式的神秘。",
+    "news": [
+        {
+          "publish_date": "2022-10-25",
+          "title": "【春節訂房】宏兔大展玉兔迎春",
+          "picture": "pic1.jpg",
+          "content": "兔年新春過年何處去？就到溪頭妖怪村！2023年農曆新年已經開放訂房囉～"
+        },
+        {
+          "publish_date": "2022-09-22",
+          "title": "【比賽】2022大小妖怪設計師",
+          "picture": "pic2.jpg",
+          "content": "大家是否欣賞了今年妖怪主題飯店與建國科大聯合推出的設計特展－「祥妖福怪」了呢？請發揮想像力，想想看，參加山林中的慶典將會遇到甚麼樣子的妖怪呢？！"
+        },
+        {
+          "publish_date": "2022-09-05",
+          "title": "【體驗行程】特色糕餅DIY",
+          "picture": "pic3.jpg",
+          "content": "來到溪頭妖怪松林町相信很多人都吃過、買過溪頭特產咬人貓酥餅及銀杏酥，想不想試試怎麼製作呢？"
+        }
+      ],
+    "products": [
+        {
+          "name": "二人房",
+          "price": "2000",
+          "picture": "https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1157&q=80",
+          "desc": "美式百老風格 每房皆有客廳！房間內皆設有RO逆滲透山泉水，(房型樣式每房空間格局略有不同 以實際排房為主)"
+        },
+        {
+            "name": "四人房",
+            "price": "4000",
+            "picture": "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "desc": "為兩大床房型, 房間位於大樓二樓和三樓，大樓區衛浴設備皆為乾溼分離，房間內皆設有RO逆滲透山泉水，(房型樣式每房空間格局略有不同 以實際排房為主)"
+        },
+        {
+            "name": "獨棟Villa",
+            "price": "8000",
+            "picture": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "desc": "『阿里山月灣Villa』是適合家庭出遊、車隊、三五旅行同好住宿休憩的好選擇！"
+        }
+      ]
+}

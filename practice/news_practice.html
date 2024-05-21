@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <style>
+        table {
+            border: 1px solid #333;
+        }
+        td{
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let news = {
+            publish_date: '2022-10-25',
+            title: '【春節訂房】宏兔大展玉兔迎春',
+            picture: 'new-year.jpg',
+            content: '兔年新春過年何處去？就到溪頭妖怪村！2023年農曆新年已經開放訂房囉～'
+        };
+        let news_data = [
+        {
+            publish_date: '2022-10-25',
+            title: '【春節訂房】宏兔大展玉兔迎春',
+            picture: 'new-year.jpg',
+            content: '兔年新春過年何處去？就到溪頭妖怪村！2023年農曆新年已經開放訂房囉～',
+            link: 'http'
+        },
+        {
+            publish_date: '2022-09-22',
+            title: '【比賽】2022大小妖怪設計師',
+            picture: 'design.jpg',
+            content: '大家是否欣賞了今年妖怪主題飯店與建國科大聯合推出的設計特展－「祥妖福怪」了呢？請發揮想像力，想想看，參加山林中的慶典將會遇到甚麼樣子的妖怪呢？！',
+            link: 'http'
+        },
+        {
+            publish_date: '2022-09-05',
+            title: '【體驗行程】特色糕餅DIY',
+            picture: 'cookie.jpg',
+            content: '來到溪頭妖怪松林町相信很多人都吃過、買過溪頭特產咬人貓酥餅及銀杏酥，想不想試試怎麼製作呢？',
+            link: 'http'
+        }
+        ]
+        console.log(news_data[1].title);
+        //將news資料顯示在table上
+        let all_news = '<table>';
+        for(var i = 0; i < news_data.length; i++){
+            console.log(news_data[i]);
+            let data_string = '<tr>';
+            for(var j in news_data[i]){
+                data_string += `<td>${news_data[i][j]}</td>`;
+            }
+            data_string += '</tr>';
+            all_news += data_string;
+        }
+        all_news += '</table>';
+        document.querySelector("body").innerHTML = all_news;
+    </script>
+</body>
+</html>

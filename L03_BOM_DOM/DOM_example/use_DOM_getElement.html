@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取得html元素</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="weekday">今天星期幾?</div>
+    <div class="day">星期一</div>
+    <div class="day">星期二</div>
+    <div class="day">星期三</div>
+    <div class="day">星期四</div>
+    <div class="day">星期五</div>
+    <ul id="list">
+        <li>義大利麵</li>
+        <li>漢堡</li>
+        <li>牛排</li>
+        <li>玉米濃湯</li>
+    </ul>
+    <div id="box"></div>
+    <script>
+        //01.取得id為weekday的元素 document.getElementsById
+
+        //02.取得class名稱為day的元素 document.getElementsByClassName
+        //let elements = document.getElementsByClassName('day');
+        //console.log(elements)
+        //03.取得星期二的文字
+
+        //04.取得list子項目 getElementsByTagName
+        //let lis = document.getElementById('list').getElementsByTagName('li')[3];
+        //05.取得項目牛排
+
+        //06.變換list中玉米濃湯項目為海鮮濃湯
+
+        //07.變換box顏色為紅色#f00 先取得物件，再使用.style.backgroundColor = 顏色碼;
+
+        //08.宣告變數day為「Sunday」，並將變數值取代class名稱為day的第5個元素
+    </script>
+</body>
+</html>

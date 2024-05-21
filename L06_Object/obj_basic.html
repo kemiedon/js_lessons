@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件練習</title>
+</head>
+<body>
+    <script>
+        //宣告空物件
+        let user = {};
+        user.name = "Mark";
+        user.birth = "1988-04-02";
+        user.email = "mark@gmail.com";
+        //另一種給值的寫法
+        user["phone"] = "0978392010";
+        console.log(user);
+
+        //物件取值
+        //取得user的name
+        console.log(user.name); //或寫成user["name"]
+        //練習:取得user的生日
+
+        //使用迴圈印出user的所有資料
+        for(var i in user){
+            console.log(user[i]);
+        }
+        
+        //練習:思考如何將user所有資料顯示在div上
+
+        
+    </script>
+</body>
+</html>

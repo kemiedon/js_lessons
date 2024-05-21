@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if判斷式結合事件練習</title>
+    <link rel="stylesheet" href="../css/bmi.css">
+</head>
+
+<body>
+    <div id="box">
+        <h1>花了多少錢</h1>
+        <div id="data">
+            <div class="group">
+                <input id="money" type="text">
+            </div>
+            <button type="button" id="confirm" class="button-87">確定</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        var result = document.getElementById('result');
+        var confirm = document.getElementById('confirm');
+        confirm.addEventListener("click", () => {
+            var money = document.getElementById('money').value;
+
+            if (money >= 10000) {
+                result.innerText = "要節制喔";
+            } else if (money >= 5000) {
+                result.innerText = "這個月花的有點多";
+            } else {
+                result.innerText = "您真是節省";
+            }
+        });
+    </script>
+</body>
+
+</html>

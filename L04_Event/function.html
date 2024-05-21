@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函式說明範例</title>
+</head>
+
+<body>
+    <h1>做一個三明治</h1>
+    <button onclick="makeSandwich('全麥', '火腿')">做火腿三明治</button>
+    <button onclick="makeSandwich('白麵包', '奶酪')">做奶酪三明治</button>
+
+    <script>
+        // 定義函式
+        function makeSandwich(breadType, filling) {
+            console.log(`拿出兩片 ${breadType} 麵包`);
+            console.log(`在麵包上塗抹 ${filling}`);
+            console.log("將兩片麵包合在一起");
+            console.log("三明治完成！");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch事件練習</title>
+    <link rel="stylesheet" href="../css/bmi.css">
+</head>
+
+<body>
+    <div id="box">
+        <h1>買了什麼水果</h1>
+        <div id="data">
+            <div class="group">
+                <input id="fruit" type="text">
+            </div>
+            <button type="button" id="confirm" class="button-87">確定</button>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        var result = document.getElementById('result');
+        var confirm = document.getElementById('confirm');
+        confirm.addEventListener("click", () => {
+            var fruit = document.getElementById('fruit').value;
+
+            switch (fruit) {
+                case '奇異果':
+                    result.innerText = "你買了奇異果";
+                    break;
+                case '水蜜桃':
+                    result.innerText = "你買了水蜜桃";
+                    break;
+                case '橘子':
+                    result.innerText = "你買了橘子";
+                    break;
+                case '蘋果':
+                    result.innerText = "你買了蘋果";
+                    break;
+                case '香蕉':
+                    result.innerText = "你買了香蕉";
+                    break;
+                default:
+                    result.innerText = "你還沒買水果";
+                    break;
+            }
+
+        });
+    </script>
+</body>
+
+</html>

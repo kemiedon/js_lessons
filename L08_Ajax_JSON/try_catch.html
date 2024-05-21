@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模擬自動販賣機</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .vending-machine {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="text"] {
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="vending-machine">
+        <h1>自動販賣機</h1>
+        <form id="vendingForm">
+            <input type="text" id="drinkInput" placeholder="請輸入要購買的飲料">
+            <br>
+            <button type="submit">購買</button>
+        </form>
+        <div class="message"></div>
+    </div>
+
+    <script>
+        document.getElementById('vendingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const drinkInput = document.getElementById('drinkInput').value;
+            const randomNumber = Math.random();
+
+            try {
+                if (randomNumber < 0.5) {
+                    throw new Error('自動販賣機出現故障，無法出貨');
+                } else {
+                    document.querySelector('.message').classList.remove('error');
+                    document.querySelector('.message').innerText = `您成功購買了 ${drinkInput}`;
+                }
+            } catch (error) {
+                document.querySelector('.message').classList.add('error');
+                document.querySelector('.message').innerText = error.message;
+            }
+        });
+    </script>
+</body>
+</html>

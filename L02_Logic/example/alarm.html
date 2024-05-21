@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迴圈綜合練習</title>
+</head>
+<body>
+    <script>
+        // 倒數計時
+        console.log("倒數計時開始");
+        for (let i = 10; i >= 0; i--) {
+            console.log(i);
+        }
+        console.log("倒數計時結束");
+
+        // 早起鬧鐘
+        let time = 5;
+        console.log("早起鬧鐘開始");
+        while (time < 6) {
+            console.log("懶覺中...");
+            time++; // 模擬時間的增加
+        }
+        console.log("起床了！");
+
+        // 午休時間
+        let napTime = 0;
+        console.log("午休時間開始");
+        do {
+            console.log("午休中...");
+            napTime++; // 模擬午休時間的增加
+        } while (napTime < 60); // 1小時 = 60分鐘
+        console.log("午休結束");
+
+    </script>
+</body>
+</html>

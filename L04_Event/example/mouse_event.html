@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>滑鼠移入移出提示</title>
+</head>
+<body>
+    <img id="myImage" src="https://via.placeholder.com/150" alt="圖片">
+    <p id="hoverMessage"></p>
+
+    <script>
+        const myImage = document.getElementById('myImage');
+        const hoverMessage = document.getElementById('hoverMessage');
+
+        myImage.addEventListener('mouseenter', () => {
+            hoverMessage.innerText = "滑鼠移入圖片！";
+        });
+
+        myImage.addEventListener('mouseleave', () => {
+            hoverMessage.innerText = "滑鼠移出圖片！";
+        });
+    </script>
+</body>
+</html>

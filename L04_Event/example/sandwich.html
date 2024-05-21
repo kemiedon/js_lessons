@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函式結合事件與setInterval範例</title>
+    <style>
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 300px;
+            font-family: Arial, sans-serif;
+        }
+
+        .step {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>做一個三明治</h1>
+    <button onclick="makeSandwich('全麥', '火腿')">做火腿三明治</button>
+    <button onclick="makeSandwich('白麵包', '奶酪')">做奶酪三明治</button>
+    <div id="result"></div>
+
+    <script>
+        function makeSandwich(breadType, filling) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            const steps = [
+                `拿出兩片 ${breadType} 麵包`,
+                `在麵包上塗抹 ${filling}`,
+                "將兩片麵包合在一起",
+                "三明治完成！"
+            ];
+
+            let stepIndex = 0;
+            const intervalId = setInterval(() => {
+                if (stepIndex < steps.length) {
+                    const stepDiv = document.createElement('div');
+                    stepDiv.className = 'step';
+                    stepDiv.innerText = steps[stepIndex];
+                    resultDiv.appendChild(stepDiv);
+                    stepIndex++;
+                } else {
+                    clearInterval(intervalId);
+                }
+            }, 500); // 每0.5秒顯示一行字
+        }
+    </script>
+</body>
+
+</html>

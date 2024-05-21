@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物件資料顯示在表格</title>
+    <style>
+        table {
+            border: 1px solid #333;
+        }
+        td{
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <!-- table>tr*3>td*3 (Tab) -->
+        <!-- <table>
+            <tr>
+                <td>蘋果</td>
+                <td>5顆100元</td>
+                <td>庫存: 22箱</td>
+            </tr>
+            <tr>
+                <td>梨子</td>
+                <td>1斤100元</td>
+                <td>庫存: 10箱</td>
+            </tr>
+            <tr>
+                <td>芭樂</td>
+                <td>1斤25元</td>
+                <td>庫存: 20箱</td>
+            </tr>
+        </table> -->
+    </div>
+    <script>
+        //宣告一個空陣列，名稱為all_fruits
+        let all_fruits = [];
+        //將以下的水果商品資訊轉換成物件
+        //蘋果 售價: 5顆100元  庫存: 22箱
+        //梨子 售價: 1斤100元  庫存: 10箱
+        //芭樂 售價: 1斤25元   庫存: 20箱
+        let fruit1 = {
+            name: '蘋果',
+            price: '5顆100元',
+            stock: '22箱'
+        }
+        let fruit2 = {
+            name: '梨子',
+            price: '1斤100元',
+            stock: '10箱'
+        }
+        let fruit3 = {
+            name: '芭樂',
+            price: '1斤25元',
+            stock: '25箱'
+        }
+        //將以上的水果物件加到all_fruits陣列中(提示:可用javascript內建的陣列方法)
+        all_fruits.push(fruit1, fruit2, fruit3);
+        
+       // all_fruits.push(fruit2);
+
+        //將all_fruits的所有資料顯示在div中列出
+        let box = document.getElementById("box");
+        let fruits_data = '<table>';
+        //巢狀迴圈
+        for(var i = 0; i < all_fruits.length; i++){ //有三組陣列項目
+            console.log(all_fruits[i]); //印出每個物件
+            let data_string = '<tr>';
+            //把物件的屬性組合字串
+            for(var j in all_fruits[i]){ //all_fruits[0], all_fruits[1], all_fruits[2]
+                
+                data_string += `<td>${all_fruits[i][j]}</td>`; // "<td>" + all_fruits[i][j] + "</td>"
+            }
+            data_string += '</tr>';
+            console.log(data_string); //印出每個tr
+            fruits_data += data_string;
+          
+        }
+        fruits_data += "</table>";
+        console.log(fruits_data); //印出所有資料
+        box.innerHTML = fruits_data;
+    </script>
+</body>
+</html>

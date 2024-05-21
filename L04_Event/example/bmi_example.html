@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算練習</title>
+    <link rel="stylesheet" href="css/bmi.css">
+</head>
+
+<body>
+    <div id="box">
+        <h1>BMI計算</h1>
+        <div id="data">
+            <div class="group">
+                <label for="height">身高:</label><input id="height" type="text">
+            </div>
+            <div class="group">
+                <label for="weight">體重:</label><input id="weight" type="text">
+            </div>
+            <button type="button" id="confirm" class="button-87">計算</button>
+            <div id="result">檢測結果:</div>
+        </div>
+    </div>
+    <script>
+        var heightInput = document.getElementById("height");
+        var weightInput = document.getElementById("weight");
+        var confirm = document.getElementById("confirm");
+        var result = document.getElementById("result");
+        var BMI, height, weight;
+
+        confirm.addEventListener("click", () => {
+
+            height = heightInput.value;
+            weight = weightInput.value;
+            BMI = (weight / Math.pow((height / 100), 2)).toFixed(1);
+            result.innerText = BMI;
+
+            if (BMI < 18.5) {
+                result.innerText = "您的BMI為" + BMI + ", 小於健康範圍18.5";
+            } else if ((BMI > 18.5) && (BMI < 24.9)) {
+                result.innerText = "您的BMI為" + BMI + ", 非常健康，繼續保持喔";
+            } else if ((BMI > 25) && (BMI < 29.9)) {
+                result.innerText = "您的BMI為" + BMI + ", 有點超過範圍，要注意飲食及運動喔";
+            } else {
+                result.innerText = "您的BMI為" + BMI + ", 身體亮紅燈囉，請加強控制飲食及運動";
+            }
+        });
+    </script>
+</body>
+
+</html>

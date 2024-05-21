@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紅綠燈判斷範例</title>
+</head>
+<body>
+    <script>
+        var trafficLight = 'Red';
+
+        switch (trafficLight) {
+            case 'Red':
+                console.log('Stop.'); // 紅燈時輸出 'Stop.'
+                break;
+            case 'Yellow':
+                console.log('Be careful.'); // 黃燈時輸出 'Be careful.'
+                break;
+            case 'Green':
+                console.log('Go.'); // 綠燈時輸出 'Go.'
+                break;
+            default:
+                console.log('Invalid light signal.'); // 其他情況輸出 'Invalid light signal.'
+        }
+    </script>
+</body>
+</html>

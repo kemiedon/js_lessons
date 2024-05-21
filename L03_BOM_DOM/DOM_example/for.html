@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for迴圈練習</title>
+</head>
+
+<body>
+    <div id="box">
+        <h1>1+到1000是多少</h1>
+        <div id="result"></div>
+    </div>
+    <script>
+        var total = 0;
+        for (var i = 1; i <= 1000; i++) {
+            total += i;
+        }
+        var result = document.getElementById('result');
+        result.innerHTML = "1+到1000=" + total;
+    </script>
+</body>
+
+</html>
