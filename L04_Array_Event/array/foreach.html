@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水果清單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <ul id="fruit-list"></ul>
+    <script>
+        const fruits = ["蘋果", "梨子", "香蕉", "鳳梨", "西瓜"];
+        const fruitList = document.getElementById('fruit-list');
+
+        fruits.forEach(function(fruit, index) {
+            // 創建新的 li 元素
+            const listItem = document.createElement('li');
+            // 設定 li 元素的文本內容
+            listItem.textContent = `${index + 1}: ${fruit}`;
+            // 將 li 元素添加到 ul 中
+            fruitList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>
