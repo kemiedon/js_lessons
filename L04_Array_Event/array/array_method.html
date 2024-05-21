@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列操作範例</title>
+</head>
+<body>
+    <script>
+        // 宣告一個包含五種水果的陣列
+        let fruits = ["蘋果", "梨子", "香蕉", "鳳梨", "西瓜"];
+
+        // 加入新水果「奇異果」
+        fruits.push("奇異果");
+
+        // 移除「蘋果」
+        fruits.splice(fruits.indexOf("蘋果"), 1);
+
+        // 移除「西瓜」
+        fruits.splice(fruits.indexOf("西瓜"), 1);
+
+        // 加入「水蜜桃、橘子」二種新水果
+        fruits.push("水蜜桃", "橘子");
+
+        // 新增蔬菜陣列
+        const vegetables = ["馬鈴薯", "紅蘿蔔", "高麗菜", "豆芽菜"];
+
+        // 合併水果與蔬菜的陣列
+        const food = fruits.concat(vegetables);
+
+        // 使用 console 印出最終的食物陣列
+        console.log(food);
+    </script>
+</body>
+</html>

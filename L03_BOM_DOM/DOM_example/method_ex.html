@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綜合練習範例</title>
+</head>
+<body>
+    <div id="container">
+        <div id="item1" class="item">項目1</div>
+        <div id="item2" class="item">項目2</div>
+    </div>
+    <script>
+        // 使用 innerHTML 修改元素的 HTML 內容
+        const container = document.getElementById('container');
+        container.innerHTML = '<div class="item">新的項目1</div><div class="item">新的項目2</div>';
+
+        // 使用 innerText 修改元素的文字內容
+        const item1 = container.children[0];
+        item1.innerText = '更新後的項目1';
+
+        // 使用 textContent 修改元素的文字內容
+        const item2 = container.children[1];
+        item2.textContent = '更新後的項目2';
+
+        // 獲取 parentNode
+        const parent = item1.parentNode;
+
+        // 獲取 childNodes
+        const children = container.childNodes;
+
+        // 使用 classList 添加和移除 CSS 類別
+        item1.classList.add('highlight');
+        item1.classList.remove('highlight');
+
+        // 使用 appendChild 添加新的子節點
+        const newItem = document.createElement('div');
+        newItem.className = 'item';
+        newItem.textContent = '新的項目3';
+        container.appendChild(newItem);
+
+        // 使用 removeChild 移除子節點
+        container.removeChild(item2);
+
+        // 使用 replaceChild 替換子節點
+        const replacementItem = document.createElement('div');
+        replacementItem.className = 'item';
+        replacementItem.textContent = '替換項目';
+        container.replaceChild(replacementItem, newItem);
+    </script>
+</body>
+</html>
