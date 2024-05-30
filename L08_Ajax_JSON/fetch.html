@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用fetch處理資料</title>
+</head>
+<body>
+<script>
+    //使用GET，通常用於取得資料
+    fetch('https://api.example.com/data')
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json(); // 解析 JSON
+    })
+    .then(data => {
+        console.log(data); // 處理解析後的資料
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+    //使用POST，通常用於新增一筆資料
+    fetch('https://api.example.com/data', {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ key1: 'value1', key2: 'value2' })
+    })
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json(); // 解析 JSON
+    })
+    .then(data => {
+        console.log(data); // 處理解析後的資料
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+    //使用PUT，通常用於修改資料
+    fetch('https://api.example.com/data/1', {
+        method: 'PUT',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ key1: 'new value1', key2: 'new value2' })
+    })
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json(); // 解析 JSON
+    })
+    .then(data => {
+        console.log(data); // 處理解析後的資料
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+    //使用DELETE，通常用於刪除資料
+    fetch('https://api.example.com/data/1', {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json(); // 解析 JSON
+    })
+    .then(data => {
+        console.log(data); // 處理解析後的資料
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+
+</script>
+</body>
+</html>
