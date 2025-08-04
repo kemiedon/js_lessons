@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用forEach</title>
+</head>
+<body>
+    <script>
+        // 簡單水果清單範例：使用 forEach 印出水果名稱
+
+        // 1. 宣告水果清單陣列
+        let fruits = ["蘋果", "香蕉", "西瓜", "水蜜桃", "火龍果"];
+
+        // 2. 使用 forEach 印出所有水果
+        console.log("=== 我的水果清單 ===");
+        fruits.forEach(function(fruit, index) {
+            console.log(`第 ${index + 1} 種水果：${fruit}`);
+        });
+    </script>
+</body>
+</html>

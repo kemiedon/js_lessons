@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習陣列方法</title>
+</head>
+<body>
+    <script>
+        // 1. 陣列宣告與基本操作
+        let fruits = ["蘋果", "香蕉", "西瓜", "水蜜桃"];
+        console.log("陣列長度：", fruits.length); // 取得陣列元素總數，輸出：4
+        console.log("索引 1 的值：", fruits[1]); // 取得指定索引的值，輸出：香蕉
+        fruits[1] = "奇異果"; // 重新賦值給指定索引
+        console.log("修改後索引 1 的值：", fruits[1]); // 輸出：奇異果
+
+        // 2. 陣列與物件的型別比較
+        let people = ["Mark", 30, "Manager"]; // 陣列：姓名、年齡、職稱
+        let people01 = { name: "Mark", age: 30, job_title: "Manager" }; // 物件
+        console.log("fruits 型別：", typeof fruits); // 輸出：object
+        console.log("people01 型別：", typeof people01); // 輸出：object
+        console.log("檢查 fruits 是否為陣列：", Array.isArray(fruits)); // 輸出：true
+
+        // 3. 新增與移除陣列元素
+        fruits.push("火龍果", "櫻桃"); // 從陣列尾端新增多個元素
+        console.log("新增火龍果與櫻桃後：", fruits); // 輸出：["蘋果", "奇異果", "西瓜", "水蜜桃", "火龍果", "櫻桃"]
+        fruits.unshift("芭樂"); // 從陣列前端新增元素
+        console.log("新增芭樂後：", fruits); // 輸出：["芭樂", "蘋果", "奇異果", "西瓜", "水蜜桃", "火龍果", "櫻桃"]
+        fruits.shift(); // 移除陣列第一個元素
+        console.log("移除第一個元素後：", fruits); // 輸出：["蘋果", "奇異果", "西瓜", "水蜜桃", "火龍果", "櫻桃"]
+        fruits.pop(); // 移除陣列最後一個元素
+        console.log("移除最後一個元素後：", fruits); // 輸出：["蘋果", "奇異果", "西瓜", "水蜜桃", "火龍果"]
+
+        // 4. 陣列複製與操作
+        let new_fruits = fruits.slice(); // 複製陣列（淺層複製）
+        console.log("複製的陣列：", new_fruits); // 輸出：["蘋果", "奇異果", "西瓜", "水蜜桃", "火龍果"]
+        new_fruits.splice(3, 1, "芒果"); // 從索引 3 開始，移除 1 個元素，並插入 "芒果"
+        console.log("替換後的陣列：", new_fruits); // 輸出：["蘋果", "奇異果", "西瓜", "芒果", "火龍果"]
+
+        // 5. 合併陣列與檢查元素
+        let vegetables = ["紅蘿蔔", "馬鈴薯", "洋蔥", "菠菜"];
+        let my_bag = new_fruits.concat(vegetables); // 合併兩個陣列
+        console.log("合併後的陣列：", my_bag); // 輸出：["蘋果", "奇異果", "西瓜", "芒果", "火龍果", "紅蘿蔔", "馬鈴薯", "洋蔥", "菠菜"]
+        console.log("檢查是否有洋蔥：", my_bag.includes("洋蔥")); // 輸出：true
+        console.log("檢查是否有洋蔥1：", my_bag.includes("洋蔥1")); // 輸出：false
+
+        // 6. 檢查特定元素是否存在
+        let cart = ["項鍊", "耳環", "珍珠手鍊"];
+        let keyword = "耳環";
+        if (cart.includes(keyword)) {
+            console.log(`你購買了 ${keyword}`); // 輸出：你購買了 耳環
+        }
+
+        // 7. 遍歷陣列
+        my_bag.forEach(function (item, index) {
+            console.log(`第 ${index + 1} 個值是 ${item}`); // 逐一輸出每個元素與索引
+        });
+
+        // 8. 陣列轉為字串
+        console.log("陣列轉為字串：", fruits.join("/")); // 輸出：蘋果/奇異果/西瓜/水蜜桃/火龍果
+
+    </script>
+</body>
+</html>
